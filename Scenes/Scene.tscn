@@ -1,0 +1,108 @@
+[gd_scene load_steps=13 format=3 uid="uid://cbwiw6erod77g"]
+
+[ext_resource type="Texture2D" uid="uid://40hc6elnt6cw" path="res://CalmDriveLayers/Sky.png" id="1_1apcj"]
+[ext_resource type="Script" path="res://Scripts/ParallaxManager.gd" id="1_e5ix3"]
+[ext_resource type="Texture2D" uid="uid://osyug82utukn" path="res://CalmDriveLayers/Clouds.png" id="2_kr3lh"]
+[ext_resource type="Texture2D" uid="uid://by76oxcwv4t6r" path="res://CalmDriveLayers/Hill.png" id="3_3mcvr"]
+[ext_resource type="Texture2D" uid="uid://dlsb6evrnk87r" path="res://CalmDriveLayers/Tree_Grass.png" id="4_gpkec"]
+[ext_resource type="Texture2D" uid="uid://cwmf1u568i0ot" path="res://CalmDriveLayers/Background_Trees.png" id="5_jmbgm"]
+[ext_resource type="Texture2D" uid="uid://b45vqhumm5sbu" path="res://CalmDriveLayers/Foreground_Trees.png" id="6_dhc3k"]
+[ext_resource type="Texture2D" uid="uid://dtiw8vamwxek5" path="res://CalmDriveLayers/Background_Grass.png" id="7_lwj6j"]
+[ext_resource type="Texture2D" uid="uid://b3fiufdo0ha7m" path="res://CalmDriveLayers/Yellow_Grass.png" id="8_wd6x0"]
+[ext_resource type="Texture2D" uid="uid://q7d6dvcu370o" path="res://CalmDriveLayers/Mid_Grass.png" id="9_i6skn"]
+[ext_resource type="Texture2D" uid="uid://bjiyw7wkfvd0f" path="res://CalmDriveLayers/ForegroundGrass.png" id="10_d4scu"]
+[ext_resource type="Texture2D" uid="uid://clyyfsk5ffob1" path="res://CalmDriveLayers/Road.png" id="11_kerss"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("UIElements")]
+script = ExtResource("1_e5ix3")
+UIElements = [NodePath("Clouds"), NodePath("Hill"), NodePath("TreeGrass"), NodePath("BackgroundTrees"), NodePath("ForegroundTrees"), NodePath("BackgroundGrass"), NodePath("YellowGrass"), NodePath("MidGrass"), NodePath("ForegroundGrass"), NodePath("Road")]
+TreeGrassSpeed = 0.5
+BGTreesSpeed = 0.5
+
+[node name="Sky" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("1_1apcj")
+
+[node name="Sky2" type="Sprite2D" parent="Sky"]
+position = Vector2(640, 0)
+texture = ExtResource("1_1apcj")
+
+[node name="Clouds" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("2_kr3lh")
+
+[node name="Clouds2" type="Sprite2D" parent="Clouds"]
+position = Vector2(640, 0)
+texture = ExtResource("2_kr3lh")
+
+[node name="Hill" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("3_3mcvr")
+
+[node name="Hill2" type="Sprite2D" parent="Hill"]
+position = Vector2(640, 0)
+texture = ExtResource("3_3mcvr")
+
+[node name="TreeGrass" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("4_gpkec")
+
+[node name="TreeGrass2" type="Sprite2D" parent="TreeGrass"]
+position = Vector2(640, 0)
+texture = ExtResource("4_gpkec")
+
+[node name="BackgroundTrees" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("5_jmbgm")
+
+[node name="BackgroundTrees2" type="Sprite2D" parent="BackgroundTrees"]
+position = Vector2(640, 0)
+texture = ExtResource("5_jmbgm")
+
+[node name="ForegroundTrees" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("6_dhc3k")
+
+[node name="ForegroundTrees2" type="Sprite2D" parent="ForegroundTrees"]
+position = Vector2(640, 0)
+texture = ExtResource("6_dhc3k")
+
+[node name="BackgroundGrass" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("7_lwj6j")
+
+[node name="BackgroundGrass2" type="Sprite2D" parent="BackgroundGrass"]
+position = Vector2(640, 0)
+texture = ExtResource("7_lwj6j")
+
+[node name="YellowGrass" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("8_wd6x0")
+
+[node name="YellowGrass2" type="Sprite2D" parent="YellowGrass"]
+position = Vector2(640, 0)
+texture = ExtResource("8_wd6x0")
+
+[node name="MidGrass" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("9_i6skn")
+
+[node name="MidGrass2" type="Sprite2D" parent="MidGrass"]
+position = Vector2(640, 0)
+texture = ExtResource("9_i6skn")
+
+[node name="ForegroundGrass" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("10_d4scu")
+
+[node name="ForegroundGrass2" type="Sprite2D" parent="ForegroundGrass"]
+position = Vector2(640, 0)
+texture = ExtResource("10_d4scu")
+
+[node name="Road" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("11_kerss")
+
+[node name="Road2" type="Sprite2D" parent="Road"]
+position = Vector2(640, 0)
+texture = ExtResource("11_kerss")

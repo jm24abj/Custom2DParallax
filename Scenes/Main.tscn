@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddyhc8lq7lr6a"]
+
+[ext_resource type="PackedScene" uid="uid://cbwiw6erod77g" path="res://Scenes/Scene.tscn" id="1_bml78"]
+[ext_resource type="PackedScene" uid="uid://c8v153rptq4kb" path="res://Scenes/Car.tscn" id="2_w7qkc"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_bml78")]
+instanceNum = 0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_w7qkc")]
+position = Vector2(113, 297)

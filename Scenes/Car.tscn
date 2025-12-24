@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8v153rptq4kb"]
+
+[ext_resource type="Texture2D" uid="uid://dfyfcvhs83q33" path="res://Images/VW_Camper.png" id="1_jocgk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bf26"]
+atlas = ExtResource("1_jocgk")
+region = Rect2(0, 0, 224, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5yin"]
+atlas = ExtResource("1_jocgk")
+region = Rect2(224, 0, 224, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7vtf"]
+atlas = ExtResource("1_jocgk")
+region = Rect2(448, 0, 224, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flhn0"]
+atlas = ExtResource("1_jocgk")
+region = Rect2(672, 0, 224, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bg245"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bf26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5yin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7vtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flhn0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3xl5"]
+size = Vector2(192, 108)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(268, 114)
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bg245")
+autoplay = "default"
+frame_progress = 0.35592
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, -1)
+shape = SubResource("RectangleShape2D_g3xl5")
